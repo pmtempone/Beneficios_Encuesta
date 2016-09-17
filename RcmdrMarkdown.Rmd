@@ -35,8 +35,9 @@ Sumario de datos:
 
 
 ```{r encuesta_v2,echo=FALSE}
-summary(encuesta[,1:2])
-summary(encuesta_v2)
+summary(encuesta)
+
+plot(encuesta_v2$monto,encuesta_v2$edad)
 
 ```
 
@@ -72,13 +73,13 @@ corrplot(cor.dendlist(encuesta.dend), "pie", "lower")
 ```
 
 
-Seleccionamos clusters de vecinos mas lejanos:
+Seleccionamos clusters de vecinos mas cercanos:
 
 ```{r,echo=FALSE}
 plot(encuesta.clust.com %>% set("branches_k_color", k=3) %>% set("branches_lwd", 2), main = "Lejano")
 ```
 
-Densidad de los encuestados:
+Densidad de los encuesta_v2dos:
 
 ```{r,echo=FALSE}
 ENdensity(factor_ana)
@@ -87,4 +88,6 @@ ENdensity(factor_ana)
 ```{r,echo=FALSE}
 MCA(encuesta_v2)
 ```
+
+
 

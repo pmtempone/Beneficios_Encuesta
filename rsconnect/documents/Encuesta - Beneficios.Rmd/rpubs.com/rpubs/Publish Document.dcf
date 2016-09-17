@@ -1,0 +1,7 @@
+name: Publish Document
+account: rpubs
+server: rpubs.com
+appId: https://api.rpubs.com/api/v1/document/209875/57fbd53657a34995a5798ba48b82f8bc
+bundleId: https://api.rpubs.com/api/v1/document/209875/57fbd53657a34995a5798ba48b82f8bc
+url: http://rpubs.com/pmtempone/209875
+when: 1474079137.01127

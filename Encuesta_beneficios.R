@@ -52,7 +52,18 @@ encuesta_v2$REINTEGRO.BONO.GASTO.ESCOLAR <- factor(ifelse(encuesta_v2$REINTEGRO.
 encuesta_v2$BONO.POR.DESEMPEÑO <- factor(ifelse(encuesta_v2$BONO.POR.DESEMPEÑO==1,'SI','NO'))
 encuesta_v2$REGALOS.DIAS.FESTIVOS <- factor(ifelse(encuesta_v2$REGALOS.DIAS.FESTIVOS==1,'SI','NO'))
 encuesta_v2$GUARDERIA <- factor(ifelse(encuesta_v2$GUARDERIA==1,'SI','NO'))
-encuesta_v2$REINTEGRO.BONO.GASTO.ESCOLAR <- factor(ifelse(encuesta_v2$REINTEGRO.BONO.GASTO.ESCOLAR==1,'SI','NO'))
+encuesta_v2$CLUB.LA.NACION <- factor(ifelse(encuesta_v2$CLUB.LA.NACION==1,'SI','NO'))
+encuesta_v2$SEMANA.EXTRA.VACACIONES <- factor(ifelse(encuesta_v2$SEMANA.EXTRA.VACACIONES==1,'SI','NO'))
+encuesta_v2$REGALO.CUMPLEAÑOS <- factor(ifelse(encuesta_v2$REGALO.CUMPLEAÑOS==1,'SI','NO'))
+encuesta_v2$CUMPLEAÑOS.OFF <- factor(ifelse(encuesta_v2$CUMPLEAÑOS.OFF==1,'SI','NO'))
+encuesta_v2$JORNADA.REDUCIDA <- factor(ifelse(encuesta_v2$JORNADA.REDUCIDA==1,'SI','NO'))
+encuesta_v2$CAJAS.DE.ALIMENTOS <- factor(ifelse(encuesta_v2$CAJAS.DE.ALIMENTOS==1,'SI','NO'))
+encuesta_v2$INDUCCION <- factor(ifelse(encuesta_v2$INDUCCION==1,'SI','NO'))
+encuesta_v2$CARTELERAS <- factor(ifelse(encuesta_v2$CARTELERAS==1,'SI','NO'))
+encuesta_v2$MAILING <- factor(ifelse(encuesta_v2$MAILING==1,'SI','NO'))
+colnames(encuesta_v2)[41] <- 'RED.SOCIAL'
+encuesta_v2$RED.SOCIAL <- factor(ifelse(encuesta_v2$RED.SOCIAL==1,'SI','NO'))
+encuesta_v2$COMPAÑEROS <- factor(ifelse(encuesta_v2$COMPAÑEROS==1,'SI','NO'))
 
 
 encuesta_matrix_v2 <- burt(encuesta_v2)
@@ -61,8 +72,8 @@ scatterplot.matrix(encuesta_matrix_v2)
 
 res.ca.rows = CA(encuesta_matrix, invisible="col")
 res.ca.col = CA(encuesta_matrix, invisible="row") 
-
-factor_ana <- MCA(encuesta_v2[1:12])
+dev.off()
+factor_ana <- MCA(encuesta_v2)
 factor_ana$eig
 
 dimdesc(factor_ana)
